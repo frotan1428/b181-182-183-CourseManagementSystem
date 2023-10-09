@@ -40,7 +40,6 @@ public class RootContextConfig {
     }
 
 
-
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource= new DriverManagerDataSource();
@@ -51,4 +50,7 @@ public class RootContextConfig {
 
         return  dataSource;
     }
+
+
+
 }

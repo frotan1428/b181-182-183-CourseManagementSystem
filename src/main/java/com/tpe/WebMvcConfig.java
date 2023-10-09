@@ -21,14 +21,15 @@ public class WebMvcConfig  implements  WebMvcConfigurer {
    public InternalResourceViewResolver resolver(){
        InternalResourceViewResolver resolver= new InternalResourceViewResolver();
        resolver.setViewClass(JstlView.class);
-       resolver.setPrefix("/WEB-INF/views");
-       resolver.setSuffix(".JSP");
+       resolver.setPrefix("/WEB-INF/views/");
+       resolver.setSuffix(".jsp");
        return resolver;
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").
-                addResourceLocations("resources/").setCachePeriod(0);
+                addResourceLocations("/resources/").setCachePeriod(0);
     }
+
 }
